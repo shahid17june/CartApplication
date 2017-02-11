@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/carts_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="my.cart.activity.CartsActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cart_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/placeHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/no_data"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <include
+        layout="@layout/progressbar"/>
+
+</RelativeLayout>

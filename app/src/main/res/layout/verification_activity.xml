@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/verification_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="my.cart.activity.VerificationActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/verificationHeader"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:background="@drawable/round_shape">
+
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/message" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:src="@drawable/checked" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/sms_sent_toTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/verificationHeader"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:text="@string/sms_sent_to"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sms_sent_toTxt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text=""
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/editNumberBtn"
+                android:layout_width="@dimen/_85sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_below="@+id/phone_number"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edit_btn_effect"
+                android:onClick="doClick"
+                android:text="@string/edit_number"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/codeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editNumberBtn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="@dimen/_48sdp"
+                android:layout_marginLeft="@dimen/_48sdp"
+                android:layout_marginRight="@dimen/_48sdp"
+                android:layout_marginStart="@dimen/_48sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:text="@string/re_enter_verification_code"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/codeEdiText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_below="@+id/codeLabel"
+                android:layout_centerHorizontal="true"
+                android:inputType="text"
+                android:layout_marginEnd="@dimen/_48sdp"
+                android:layout_marginLeft="@dimen/_48sdp"
+                android:layout_marginRight="@dimen/_48sdp"
+                android:layout_marginStart="@dimen/_48sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/editext_view"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:text=""
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/verifyBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_below="@+id/codeEdiText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="@dimen/_48sdp"
+                android:layout_marginLeft="@dimen/_48sdp"
+                android:layout_marginRight="@dimen/_48sdp"
+                android:layout_marginStart="@dimen/_48sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/register_button_effect"
+                android:gravity="center"
+                android:onClick="doClick"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:text="@string/verify"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/reSendBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_below="@+id/verifyBtn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="@dimen/_48sdp"
+                android:layout_marginLeft="@dimen/_48sdp"
+                android:layout_marginRight="@dimen/_48sdp"
+                android:layout_marginStart="@dimen/_48sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/edit_btn_effect"
+                android:layout_marginBottom="@dimen/_40sdp"
+                android:gravity="center"
+                android:onClick="doClick"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:text="@string/resend"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <include
+        layout="@layout/progressbar"/>
+</RelativeLayout>

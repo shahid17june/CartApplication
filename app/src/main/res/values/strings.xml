@@ -1,0 +1,35 @@
+<resources>
+    <!--Registration page-->
+    <string name="app_name">CartApplication</string>
+    <string name="register">Register</string>
+    <string name="country">Country</string>
+    <string name="phone_number">Phone No</string>
+    <string name="enter_country_code">Enter country code</string>
+    <string name="enter_phone_no">Enter phone no</string>
+
+    <!--verification page-->
+    <string name="verification">Verification</string>
+    <string name="sms_sent_to">SMS sent to</string>
+    <string name="edit_number">Edit Number</string>
+    <string name="re_enter_verification_code">Please enter the verification code recieved by sms.</string>
+    <string name="verify">Verify</string>
+    <string name="resend">Resend</string>
+
+    <!--cart page-->
+    <string name="cart">Carts</string>
+    <string name="no_data">No data in your cart.</string>
+
+    <!--cart Creation-->
+    <string name="create">Create</string>
+    <string name="name">Name</string>
+
+    <string name="save">Save</string>
+    <string name="add">Add</string>
+
+    <string name="db_name">abstract</string>
+    <string name="db_pass">anonymous</string>
+
+    <string name="input_field_not_empty">Field can\'t be empty.</string>
+
+    <string name="code_not_matched">OTP not matched.</string>
+</resources>
